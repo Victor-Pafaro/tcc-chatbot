@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+Homepage
+{% endblock %}
+
+<head>
+    <style>
+        .container{
+            background: rgb(149, 128, 128);
+            width: 400px;
+            height: 250px;
+            border-radius: 10px;
+            margin-top: 100px;
+            margin-left: 38%;
+            text-align: center;
+        }
+        h2{
+            margin-top: 1px;
+            text-align: center;
+            font-style: italic;
+            font-family:'Arial Narrow', sans-serif;
+            color: rgb(241, 65, 65);
+        }
+        .logo{
+            width: 50px;
+            height: 50px;
+            position: relative;
+            margin-top: -40px;
+        }
+
+
+        #usr {
+                width: 200px;
+                background-image: url("logoUser.png");
+                padding: 5px;
+                background-size: 1.7em;
+                padding-left: 1.3em;
+                text-align: center;
+                background-repeat: no-repeat;
+                border-radius: 15px;
+        }
+        .btnSub{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            border:none;
+            width: 100px;
+            color: white;
+            font-weight: bold;
+            height: 40px;
+            background-color: rgb(195, 26, 26);
+            border-radius: 15px;
+        }
+
+        .fundoTop{
+            position: absolute;
+            background: silver;
+            width: 100%;
+            height: 180px;
+        }
+
+        .fundoBot{
+            background: red;
+            width: 100%;
+            height: 100%;
+        }
+
+        body{
+            margin: 0px;
+        }
+
+        .containerBin{
+            width: 850px;
+            height: 700px;
+            border-radius: 15px 0px 0px 15px;
+            background-color: white;
+            margin-left: 100px;
+            margin-top: 100px;
+            display: flex;
+            position: relative;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+{% block content %}
+    <body class="fundoBot"/>
+
+        <nav class="fundoTop">
+
+            <div style="margin-left: 330px;margin-top: 100px;">
+
+                <div class="containerBin" style="width: 300px;">
+
+                    <img src="{% static 'images/logo_ctc.png' %}" style="margin-left: -40px;width: 100px;height: 100px;margin-top:10px;"/>
+
+                    <h2 style="margin-top: 120px; position: absolute; margin-left: -50px;">COTUCA</h2>
+
+                    <a href="#" style="text-decoration: none;color: black; cursor: pointer; margin-left:-20px; position: absolute; margin-top: 200px;text-align: center;"><img src="{% static 'images/dud.png' %}" style="margin-top:-10px;position: absolute;margin-left:-45px;width:35px; height:35px;"/>Dúvidas Frequentes</a>
+
+
+                </div>
+
+                    <div style="display:flex;border-radius: 15px 15px 15px 15px;width: 700px;background-color: black;justify-content:center;height: 30vw;">
+
+                        <div style ="width:120px;height:120px;background-color:silver;border-radius:100%;margin-top:3vw;">
+
+                            <img src="{% static 'images/bin.jpg' %}" style="display:inline-block;margin-left:0.5vw; width:5vw; height: 5vw; border-radius:100%;" />
+
+                        </div>
+
+                    <input type="text" placeholder="Digite sua dúvida..." style = "width:800px;position:absolute; margin-top:655px; height:32px; border-radius:10px; border:none;"/>
+
+                    <button type="submit"style="position: absolute;all: unset;outline: revert;"><img src="{% static 'images/setinha.png' %}" style="position: absolute;width: 25px;height: 25px;margin-top: -17px;margin-left: -40px;rotate: 10px;transform: rotate(45deg);cursor: pointer;"/></button>
+
+
+
+
+                </div>
+
+            </div>
+        </nav>
+    </body>
+
+       <footer class=" px-5 py-10 ">
+           <ul class="flex justify-between items-center">
+               <li>&copy; 2023</li>
+               <li> Feito com Python (Django)</li>
+               <li>JNV</li>
+           </ul>
+       </footer>
+{% endblock %}
