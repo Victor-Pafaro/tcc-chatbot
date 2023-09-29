@@ -7,20 +7,19 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Pergunta
 
 
-def login(request):
-    return render(request, "login.html")
+# def login(request):
+#     return render(request, "login.html")
 
+class TelaInicial(TemplateView):
+    template_name = "telainicial.html"
 
-class Homebin(TemplateView):
+class Homebin(LoginRequiredMixin,TemplateView):
     template_name = "homebin.html"
 
 class Cadastro(TemplateView):
     template_name = "cadastro.html"
 
-class DuvidasFrequentes(ListView):
+class DuvidasFrequentes(LoginRequiredMixin,ListView):
     template_name = "duvidasfrequentes.html"
     model = Pergunta
 
-
-# def homebin(request):
-#     return render(request, "homebin.html")
