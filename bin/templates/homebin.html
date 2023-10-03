@@ -5,128 +5,39 @@
 Homepage
 {% endblock %}
 
+<html lang="pt-br">
 <head>
-    <style>
-        .container{
-            background: rgb(149, 128, 128);
-            width: 400px;
-            height: 250px;
-            border-radius: 10px;
-            margin-top: 100px;
-            margin-left: 38%;
-            text-align: center;
-        }
-        h2{
-            margin-top: 1px;
-            text-align: center;
-            font-style: italic;
-            font-family:'Arial Narrow', sans-serif;
-            color: rgb(241, 65, 65);
-        }
-        .logo{
-            width: 50px;
-            height: 50px;
-            position: relative;
-            margin-top: -40px;
-        }
+    <title>Homepage</title>
 
-
-        #usr {
-                width: 200px;
-                background-image: url("logoUser.png");
-                padding: 5px;
-                background-size: 1.7em;
-                padding-left: 1.3em;
-                text-align: center;
-                background-repeat: no-repeat;
-                border-radius: 15px;
-        }
-        .btnSub{
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
-            border:none;
-            width: 100px;
-            color: white;
-            font-weight: bold;
-            height: 40px;
-            background-color: rgb(195, 26, 26);
-            border-radius: 15px;
-        }
-
-        .fundoTop{
-            position: absolute;
-            background: silver;
-            width: 100%;
-            height: 180px;
-        }
-
-        .fundoBot{
-            background: red;
-            width: 100%;
-            height: 100%;
-        }
-
-        body{
-            margin: 0px;
-        }
-
-        .containerBin{
-            width: 850px;
-            height: 700px;
-            border-radius: 15px 0px 0px 15px;
-            background-color: white;
-            margin-left: 100px;
-            margin-top: 100px;
-            display: flex;
-            position: relative;
-            justify-content: center;
-        }
-    </style>
 </head>
 
 {% block content %}
-    <body class="fundoBot"/>
+    <body style = "background-color:red;">
 
-        <nav class="fundoTop">
+        <nav class = " fundoTop ">
 
-            <div style="margin-left: 330px;margin-top: 100px;">
+            <div style = " margin-left: 25vw; margin-top: -5vh;">
 
-                <div class="containerBin" style="width: 300px;">
-
-                    <img src="{% static 'images/logo_ctc.png' %}" style="margin-left: -40px;width: 100px;height: 100px;margin-top:10px;"/>
-
-                    <h2 style="margin-top: 120px; position: absolute; margin-left: -50px;">COTUCA</h2>
-
-                    <a href="#" style="text-decoration: none;color: black; cursor: pointer; margin-left:-20px; position: absolute; margin-top: 200px;text-align: center;"><img src="{% static 'images/dud.png' %}" style="margin-top:-10px;position: absolute;margin-left:-45px;width:35px; height:35px;"/>Dúvidas Frequentes</a>
-
-
+                <div class = " containerBin " style = " width: 20vw; height:75vh; background-color: white;border-radius: 15px 0px 0px 15px; margin-left: -10vw">
+                    <img src="{% static 'images/logo_ctc.png' %}" style = " width: 4.5vw; height: 9.4vh; margin-top: 0.5vw; margin-left: 8vw;position:absolute;"/>
+                    <a href="#" style="font-size: 1vw;text-decoration: none;color: black; cursor: pointer; margin-left:7vw; position: absolute; margin-top: 6vw;text-align: center;"><img src="{% static 'images/dud.png' %}" style="text-align:center;margin-left: -2.5vw;width:2vw;margin-top: -0.090vw; height:4vh;position:absolute;justify-content:center;"/>Dúvidas Frequentes</a>
+                    <a href="#"style="position:absolute; font-style:none;margin-top: 34vw;"><img src="{% static 'images/sair.png' %}" style="position:absolute;width:2vw; height:4vh;margin-left:3vw; margin-left: 1.5vw; margin-top:-6vh;"><p style="margin-top:-5vh;margin-left: 4vw; font-weight:bold;font-family:Sans-Serif;">Sair</p></a>
                 </div>
 
-                    <div style="display:flex;border-radius: 15px 15px 15px 15px;width: 700px;background-color: black;justify-content:center;height: 30vw;">
+                    <div style=" margin-top: -75vh;border-radius: 0px 15px 15px 0px; width: 50vw;height: 75vh; background-color: black; margin-left:10vw;">
 
-                        <div style ="width:120px;height:120px;background-color:silver;border-radius:100%;margin-top:3vw;">
+                        <div name = "cyrcle"style =" width: 6vw; height:12vh; background-color: silver; border-radius: 100%; margin-top:2vw; margin-left: 2vw; position:absolute;">
+                            <img src="{% static 'images/bin.jpg' %}" style="margin-top: 0.5vw; display:inline-block;margin-left:0.5vw; width:5vw; height: 10vh; border-radius:100%;position:absolute;" />
+                            <div>
+                                <input type="text" placeholder=" Digite sua dúvida..."style = "font-size: 1.2vw; width: 40vw; position:absolute; margin-top:28.5vw; height:4.6vh; border-radius:15vw  ;margin-left:5vw; padding:10px;"/>
 
-                            <img src="{% static 'images/bin.jpg' %}" style="display:inline-block;margin-left:0.5vw; width:5vw; height: 5vw; border-radius:100%;" />
+                                <button type="submit" style="position: absolute;all: unset;outline: revert;"><img src="{% static 'images/setinha.png' %}" style="width: 30px; height: 30px; margin-top: 28.7vw; margin-left: 42.5vw; transform: rotate(45deg);cursor: pointer;"/></button>
+                            </div>
 
                         </div>
-
-                    <input type="text" placeholder="Digite sua dúvida..." style = "width:800px;position:absolute; margin-top:655px; height:32px; border-radius:10px; border:none;"/>
-
-                    <button type="submit"style="position: absolute;all: unset;outline: revert;"><img src="{% static 'images/setinha.png' %}" style="position: absolute;width: 25px;height: 25px;margin-top: -17px;margin-left: -40px;rotate: 10px;transform: rotate(45deg);cursor: pointer;"/></button>
-
-
-
-
-                </div>
-
+                    </div>
             </div>
         </nav>
     </body>
-
-       <footer class=" px-5 py-10 ">
-           <ul class="flex justify-between items-center">
-               <li>&copy; 2023</li>
-               <li> Feito com Python (Django)</li>
-               <li>JNV</li>
-           </ul>
-       </footer>
+</html>
 {% endblock %}
