@@ -6,27 +6,31 @@
 Inicio
 {% endblock %}
 
+
 <head>
-        <link href="{% static 'css/estilo.css' %}" rel="stylesheet">
+    <link href="{% static 'css/estilo.css' %}" rel="stylesheet">
 </head>
 
 {% block content %}
-
     <div>
-         <img src="{% static 'images/robo2.jpg' %}" style="display: inline-block;">
+        <img src="{% static 'images/robozinho.gif' %}" style="width:100%;height: 100%;max-width: 35vw;max-height: 60vh;position: absolute;object-position: center;margin-top: 10vh;">
     </div>
 
-<div class="grid grid-cols-1 gap-1">
-  <div style="display: inline-block;"><img src="{% static 'images/foto-jp.jpg' %}"> </div>
-  <div><img src="{% static 'images/foto-nilton.jpg' %}"> </div>
-  <div><img src="{% static 'images/foto-vito.jpg' %}"> </div>
-</div>
+    <div style="display: flex;align-items: center; justify-content: right; gap:2vw; width: 100%;max-width: 100vw;flex-wrap: wrap;margin-top: 40vh; ">
+        <img src="{% static 'images/foto-jp.jpg' %}"style=" width: 9vw; height:20vh; object-fit:cover; object-position:top;border-radius: 15px;margin-right:2vw;position:absolute;margin-top: -55vh;">
 
-   <footer class=" px-5 py-10 bg-stone-400">
-       <ul class="flex justify-between items-center">
-           <li>&copy; 2023</li>
-           <li> Feito com Python (Django)</li>
-           <li>JNV</li>
-       </ul>
-   </footer>
+        <img src="{% static 'images/foto-nilton.jpg' %}" style=" width: 9vw; height:20vh; object-fit:cover; object-position:top;border-radius: 15px;margin-right: 2vw;position: absolute;margin-top: -10vh;">
+
+        <img src="{% static 'images/foto-vito.jpg' %}"style=" width: 9vw; height:20vh;object-fit:cover; object-position:top;border-radius: 15px;margin-right:2vw;margin-top: 37vh;position:absolute;">
+    </div>
+
+    <img src="{% static 'images/bemvindo.gif' %}" style="width:32vw; height: 50vh; margin-top: -30vh;margin-left: 35vw; border-radius: 90px;">
+
+     <footer class="bg-stone-400" style="padding: 2vh;position: fixed;bottom: 0;width: 100%;font-size: 1vw;justify-content: left;display: flexbox;">
+         <ul class="flex justify-between items-center">
+             <li><b>&copy; 2023</b></li>
+             <li><b> TCC Chatbot - Feito com Python (Django)</b></li>
+             <li><b>JNV</b></li>
+         </ul>
+     </footer>
 {% endblock %}
