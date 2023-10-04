@@ -1,36 +1,53 @@
-{% extends 'baseinicial.html' %}
-
 {% load static %}
 
-{% block titulo %}
-Inicio
-{% endblock %}
+<html>
 
+    <head>
+        <link href="{% static 'css/estilo.css' %}" rel="stylesheet">
+    </head>
 
-<head>
-    <link href="{% static 'css/estilo.css' %}" rel="stylesheet">
-</head>
+    {% block content %}
+    <body style="margin: 0;padding: 0;box-sizing: border-box;justify-content: center;display: flex;flex-direction: column;">
 
-{% block content %}
-    <div>
-        <img src="{% static 'images/robozinho.gif' %}" style="width:100%;height: 100%;max-width: 35vw;max-height: 60vh;position: absolute;object-position: center;margin-top: 10vh;">
+<div style="background-color: silver;width: 100%;padding: 3vh;">
+    <img src="{% static 'images/COTUCA_logo.png' %}" style="width: 5vw; height: 10vh;">
+    <div style="width: 8vw;height: 5vh;position:absolute;background-color: red;text-align: center;border-radius: 15px;margin-top: -8vh;margin-left: 79vw;">
+        <a href="{% url 'bin:login' %}" style="text-decoration: none;position:absolute;color:white;margin-left: -1.8vw;margin-top:1.5vh; font-family:roboto;font-size: 2vh;">ENTRAR</a>
     </div>
+</div>
 
-    <div style="display: flex;align-items: center; justify-content: right; gap:2vw; width: 100%;max-width: 100vw;flex-wrap: wrap;margin-top: 40vh; ">
-        <img src="{% static 'images/foto-jp.jpg' %}"style=" width: 9vw; height:20vh; object-fit:cover; object-position:top;border-radius: 15px;margin-right:2vw;position:absolute;margin-top: -55vh;">
-
-        <img src="{% static 'images/foto-nilton.jpg' %}" style=" width: 9vw; height:20vh; object-fit:cover; object-position:top;border-radius: 15px;margin-right: 2vw;position: absolute;margin-top: -10vh;">
-
-        <img src="{% static 'images/foto-vito.jpg' %}"style=" width: 9vw; height:20vh;object-fit:cover; object-position:top;border-radius: 15px;margin-right:2vw;margin-top: 37vh;position:absolute;">
+          <div>
+               <img src="{% static 'images/robozinho.gif' %}" style="width:100%;height: 100%;max-width: 35vw;max-height: 60vh;position: absolute;object-position: center;margin-top: 7vh;">
+               
+            </div>
+            
+    <div style="display: flex;align-items: center; justify-content: right; gap:2vw; width: 100%;max-width: 100vw;flex-wrap: wrap;margin-top: 42.5vh;">
+       
+        <img src="{% static 'images/foto-jp.jpg' %}"style=" width: 9vw; height:20vh; object-fit:cover; object-position:top;border-radius: 15px;margin-right:10vw;position:absolute;margin-top: -55vh;">
+     
+        <img src="{% static 'images/foto-nilton.jpg' %}" style=" width: 9vw; height:20vh; object-fit:cover; object-position:top;border-radius: 15px;margin-right: 10vw;position: absolute;margin-top: -10vh;">
+     
+        <img src="{% static 'images/foto-vito.jpg' %}"style=" width: 9vw; height:20vh;object-fit:cover; object-position:top;border-radius: 15px;margin-right:10vw;margin-top: 37vh;position:absolute;">
+     
     </div>
+        
+     <img src="{% static 'images/bemvindo.gif' %}" style="width:15vw; height: 20vh; margin-top: -15vh;margin-left: 43vw; border-radius: 90px;"/>
+     
+     <footer style="background-color: silver;height: 12vh; position:absolute; bottom:0; width: 100%; font-size: 1vw; justify-content: left; display: flexbox;margin-bottom: -10vh;">
 
-    <img src="{% static 'images/bemvindo.gif' %}" style="width:32vw; height: 50vh; margin-top: -30vh;margin-left: 35vw; border-radius: 90px;">
+              <ul >
 
-     <footer class="bg-stone-400" style="padding: 2vh;position: fixed;bottom: 0;width: 100%;font-size: 1vw;justify-content: left;display: flexbox;">
-         <ul class="flex justify-between items-center">
-             <li><b>&copy; 2023</b></li>
-             <li><b> TCC Chatbot - Feito com Python (Django)</b></li>
-             <li><b>JNV</b></li>
-         </ul>
-     </footer>
+                  <li>&copy; 2023</li>
+
+                <li> Feito com Python (Django)</li>
+
+                 <li>JNV</li>
+
+              </ul>
+
+        </footer>
+
+    </body>
+</html>
+
 {% endblock %}
