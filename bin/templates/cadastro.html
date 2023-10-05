@@ -6,34 +6,81 @@
 Cadastro
 {% endblock %}
 
+{% block head %}
+<style>
+    #id_username{
+       width:18vw;
+       margin: 0 auto;
+       padding-left:2vw;
+    }
+
+    #id_email{
+       width:18vw;
+       margin: 0 auto;
+       padding-left:2vw;
+    }
+
+    #id_password1{
+       width:18vw;
+       margin: 0 auto;
+       padding-left:2vw;
+    }
+
+    #id_password2{
+       width:18vw;
+       margin: 0 auto;
+       padding-left:2vw;
+    }
+
+    #hint_id_username{
+        color:white;
+    }
+    #hint_id_password1{
+        laslasla;
+        color:white;
+    }
+
+    #hint_id_password2{
+        color:white;
+    }
+
+</style>
+{% endblock %}
+
 {% block content %}
    <header class="min-h-screen bg-black bg-opacity-75 bg-blend-overlay showcase border-gray-600 flex justify-center items-center bg-no-repeat">
-       <div class="z-10 h-full py-32 md:py-0 text-gray-100 text-center flex items-center flex-col" style="width: 100vw; height:100vh; margin-top:20px;">
-           <form method="post" class="container w-80 h-96 bg-black" style="width:500px; height:400px; border-radius:5%;">
+       <div class="z-10 h-full py-32 md:py-0 text-gray-100 text-center flex items-center flex-col" style="width: 100vw; height:140vh; margin-top:20px;">
+           <form method="post" class="container w-80 h-96 bg-black" style="width:35vw; height:85vh; border-radius:5%;">
                {% csrf_token %}
                    <div style="justify-content:center; display:flex; height: 100px; position:relative;top:-50px">
                         <img src="{% static 'images/COTUCA_logo.png' %}" >
                    </div>
 
-                   <container>
-                       <div style="margin-top:-3%">
+                   <fieldset class="form-group" style="margin-top:-4vh">
+                       <legend class="border-bottom mb-4"></legend>
+                        {{ form|crispy }}
+                       <img style="height: 20px; margin-left:110px; position:relative;top:-10vh" src="{% static 'images/icone-ra1.png' %}">
+                       <img style="height: 15px; margin-left:111px; position:relative;top:-23px" src="{% static 'images/icone-email.png' %}">
+                       <img style="height: 17px; margin-left:111px; position:relative;top:-24px" src="{% static 'images/icone-nome.png' %}">
+                       <button class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md" type="submit" style="margin-top:3.8vh">Cadastrar</button>
+                   </fieldset>
+               <!--
                            <label>Digite seu RA:</label><br/>
 
                            <input type="text" name="ra" placeholder="21119"  style="border-radius: 5px; color: black ; height:30px; width:260px; padding:15px; padding-left:23px;"/><br/>
-                            <img style="height: 20px; margin-left:110px; position:relative;top:-27px" src="{% static 'images/icone-ra1.png' %}">
+
 
                            <label>Digite seu Email:</label><br>
                            <input type="text" name="email" placeholder="vitor.pafaro@gmail.com" style="border-radius: 5px; color:black;height:30px; width:260px; padding:15px; padding-left:28px;"/><br/>
-                             <img style="height: 15px; margin-left:111px; position:relative;top:-23px" src="{% static 'images/icone-email.png' %}">
+
 
                            <label>Digite seu Nome:</label><br>
                             <input type="text" name="nome" placeholder="Victor" style="border-radius: 5px; color:black; height:30px; width:260px; padding:15px; padding-left:35px;"/>
-                            <img style="height: 17px; margin-left:111px; position:relative;top:-24px" src="{% static 'images/icone-nome.png' %}">
+
                        </div>
 
                    </container>
-
-               <button class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type="submit" style="margin-top:10px">Cadastrar</button>
+                   -->
            </form>
        </div>
    </header>

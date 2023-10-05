@@ -1,7 +1,7 @@
 # url - view - template
 
 from django.urls import path, include
-from .views import Homebin, Cadastro,DuvidasFrequentes, TelaInicial
+from .views import Homebin, Cadastro, DuvidasFrequentes, TelaInicial, Teste
 
 from django.contrib.auth import views as auth_view
 
@@ -14,4 +14,5 @@ urlpatterns = [
     path("homepage/", Homebin.as_view(), name='homebin'),
     path('cadastro/', Cadastro.as_view(), name='cadastro'),
     path('duvidasfrequentes/', DuvidasFrequentes.as_view(), name='duvidasfrequentes'),
+    path('teste/', Teste.as_view(), name='teste'),
 ]

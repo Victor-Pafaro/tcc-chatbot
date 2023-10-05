@@ -7,18 +7,37 @@
 Login
 {% endblock %}
 
-<head>
-        <link href="{% static 'css/estilo.css' %}" rel="stylesheet">
-</head>
+{% block head %}
+    <style>
+        #id_username{
+            width:18vw;
+            margin: 0 auto;
+            padding-left:2vw;
+        }
+        #id_password{
+            width:18vw;
+            margin: 0 auto;
+            padding-left:2vw;
+        }
+    </style>
+
+{% endblock %}
 
 {% block content %}
    <header class="min-h-screen bg-black bg-opacity-75 bg-blend-overlay showcase border-gray-600  flex justify-center items-center bg-no-repeat">
        <div class="z-10 h-full py-32 md:py-0 text-gray-100 text-center flex items-center flex-col" style="width: 100vw; height:100vh; margin-top:20px;">
-           <form method="post" class="container w-80 h-96 bg-black" style="width:450px; height:300px; border-radius:5%;">
+           <form method="post" class="container w-80 h-96 bg-black" style="width:35vw; height:60vh; border-radius:5%;">
                {% csrf_token %}
                    <div style="justify-content:center; display:flex; height: 100px; position:relative;top:-50px">
                         <img src="{% static 'images/COTUCA_logo.png' %}" >
                    </div>
+               <fieldset class="form-group" style="margin-top:-4vh">
+                   <legend class="border-bottom mb-4"></legend>
+                    {{ form|crispy }}
+                   <img style="height: 20px; margin-left:8.3vw; position:relative;top:-19vh" src="{% static 'images/icone-ra1.png' %}" id="img-user">
+                   <img style="height: 20px; margin-left:8.3vw; position:relative;top:-9.5vh" src="{% static 'images/chave.png' %}" id="img-password">
+               </fieldset>
+                    <!--
                    <container>
                        <div style="margin-top:-1%">
                            <input type="text" name="ra" placeholder="21119"  style="border-radius: 5px; color: black ; height:30px; width:180px; padding:15px; padding-left:25px;"/><br/>
@@ -26,8 +45,9 @@ Login
                        </div>
 
                    </container>
+                   -->
 
-               <button class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type="submit" style="margin-top:10px">ENTRAR</button>
+               <button class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md" type="submit" style="margin-top:-8vh">ENTRAR</button>
                <br>
                <br>
                <a href="{% url 'bin:cadastro' %}" style="color:white; margin-top:30px; font-family:sans-serif;">Cadastre-se</a>

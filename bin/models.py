@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import  AbstractUser
+from django.contrib.auth.models import AbstractUser
 # Create your models here.
 
 class Pergunta(models.Model):
@@ -8,5 +8,5 @@ class Pergunta(models.Model):
     def __str__(self):
         return self.descricao_pergunta
 
-#class Aluno(AbstractUser):
-#   ra = models.CharField(max_lenght=5)
+class Usuario(AbstractUser):
+   ra = models.IntegerField(default=0)
