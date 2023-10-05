@@ -9,9 +9,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 # def login(request):
 #     return render(request, "login.html")
 
-class Teste(FormView):
-    template_name = "teste.html"
-    #form_class = FormLogin
+# class Teste(FormView):
+#     template_name = "teste.html"
+#     #form_class = FormLogin
 
 class TelaInicial(TemplateView):
     template_name = "telainicial.html"

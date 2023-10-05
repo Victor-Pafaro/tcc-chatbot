@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Pergunta, Usuario
 from django.contrib.auth.admin import UserAdmin
 
-# Só existe pq queremos que no admin apareça o campo de RA do aluno
+# Só existe pq queremos que no admin apareça o campo de RA do aluno atencao
 campos = list(UserAdmin.fieldsets)
 campos.append(
     ("Informação Escolar", {'fields': ('ra',)})

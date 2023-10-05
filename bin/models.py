@@ -8,5 +8,6 @@ class Pergunta(models.Model):
     def __str__(self):
         return self.descricao_pergunta
 
+#user
 class Usuario(AbstractUser):
    ra = models.IntegerField(default=0)

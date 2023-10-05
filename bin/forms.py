@@ -3,8 +3,8 @@ from .models import Usuario
 from django import forms
 
 
-class FormLogin(forms.Form):
-    ra = forms.CharField(label="RA", max_length=5)
+# class FormLogin(forms.Form):
+#     ra = forms.CharField(label="RA", max_length=5)
 
 class CriarContaForm(UserCreationForm):
     #ra = forms.IntegerField()
