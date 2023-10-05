@@ -3,8 +3,8 @@ from .models import Usuario
 from django import forms
 
 
-# class FormLogin(forms.Form):
-#     ra = forms.CharField(label="RA", max_length=5)
+class FormHomebin(forms.Form):
+     pergunta = forms.CharField(label=False,widget = forms.TextInput(attrs={'placeholder':'Digite sua dúvida...'}))
 
 class CriarContaForm(UserCreationForm):
     #ra = forms.IntegerField()

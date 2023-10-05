@@ -5,11 +5,17 @@
 Homepage
 {% endblock %}
 
-<html lang="pt-br">
-<head>
-    <title>Homepage</title>
-
-</head>
+{% block head %}
+<style>
+    #id_pergunta{
+        width:40vw;
+        height:5vh;
+        margin-top:62vh;
+        padding: 5px;
+        border-radius:3px;
+    }
+</style>
+{% endblock %}
 
 {% block content %}
     <body style = "background-color:red;">
@@ -28,10 +34,22 @@ Homepage
 
                         <div name = "cyrcle"style =" width: 6vw; height:12vh; background-color: silver; border-radius: 100%; margin-top:2vw; margin-left: 2vw; position:absolute;">
                             <img src="{% static 'images/bin.jpg' %}" style="margin-top: 0.5vw; display:inline-block;margin-left:0.5vw; width:5vw; height: 10vh; border-radius:100%;position:absolute;" />
-                            <div>
-                                <input type="text" placeholder=" Digite sua dúvida..."style = "font-size: 1.2vw; width: 40vw; position:absolute; margin-top:28.5vw; height:4.6vh; border-radius:15vw  ;margin-left:5vw; padding:10px;"/>
 
-                                <button type="submit" style="position: absolute;all: unset;outline: revert;"><img src="{% static 'images/setinha.png' %}" style="width: 30px; height: 30px; margin-top: 28.7vw; margin-left: 42.5vw; transform: rotate(45deg);cursor: pointer;"/></button>
+                            <div class="w-full flex justify-center">
+                                <div class="flex justify-center items-center w-11/12 md:w-10/12">
+                                    <form method="post" class="w-6/12 justify-center">
+                                        {% csrf_token %}
+                                        <div>
+                                            {{ form }}
+                                            <button type="submit" style="">
+                                                <img src="{% static 'images/setinha.png' %}" style="width: 2vw; height: 4vh; margin-top: -7vh; margin-left: 37vw; transform: rotate(45deg);cursor: pointer;"/>
+                                            </button>
+                                        </div>
+                                        <!--
+                                        <input type="text" placeholder=" Digite sua dúvida..."style = "font-size: 1.2vw; width: 40vw; position:absolute; margin-top:28.5vw; height:4.6vh; border-radius:15vw  ;margin-left:5vw; padding:10px;"/>
+                                        -->
+                                    </form>
+                                </div>
                             </div>
 
                         </div>
