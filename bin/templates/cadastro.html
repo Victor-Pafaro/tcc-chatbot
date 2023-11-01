@@ -3,87 +3,137 @@
 {% load crispy_forms_tags %}
 
 {% block titulo %}
-Cadastro
+Login
 {% endblock %}
 
 {% block head %}
 <style>
-    #id_username{
-       width:18vw;
-       margin: 0 auto;
-       padding-left:2vw;
+    #id_username {
+    
+        width: 20rem;
+        height: 30px;
+        margin: 0 auto;
+        background-image: url("https://cdn-icons-png.flaticon.com/128/848/848043.png?ga=GA1.1.1601770879.1696979906&track=ais");
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 1.3em;
+        padding-left: 1.4em;
     }
-
     #id_email{
-       width:18vw;
-       margin: 0 auto;
-       padding-left:2vw;
+        width: 20rem;
+        height: 30px;
+        margin: 0 auto;
+        background-image: url("https://cdn.icon-icons.com/icons2/1946/PNG/512/1904660-email-envelope-letter-mail-message-post-send_122510.png");
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 1.3em;
+        padding-left: 1.4em;
     }
 
-    #id_password1{
-       width:18vw;
-       margin: 0 auto;
-       padding-left:2vw;
-    }
+    #id_password1 {
 
+        width: 20rem;
+        height: 30px;
+        margin: 0 auto;
+        background-image: url("https://cdn.icon-icons.com/icons2/38/PNG/512/password_5167.png");
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 1.3em;
+        padding-left: 1.4em;
+       
+    }
     #id_password2{
-       width:18vw;
-       margin: 0 auto;
-       padding-left:2vw;
+        width: 20rem;
+        height: 30px;
+        margin: 0 auto;
+        background-image: url("https://cdn.icon-icons.com/icons2/38/PNG/512/password_5167.png");
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 1.3em;
+        padding-left: 1.4em;
     }
-
-    #hint_id_username{
-        color:white;
+    .conteudo {
+        margin-top: -10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 35rem;
+        padding: 2rem;
+        background-color: black;
+        border-radius: 1.7vh;
+        min-height: calc(50vh - 10vh); /* Subtrai a altura do footer */
     }
-    #hint_id_password1{
-        laslasla;
-        color:white;
-    }
-
     #hint_id_password2{
-        color:white;
+        color:silver;
+        width:20rem;
     }
 
+    /* Estilos específicos para telas menores */
+    @media (max-width: 768px) {
+        #id_username, #id_password {
+            max-width: 100%;
+        }
+    }
 </style>
 {% endblock %}
+
 {% block content %}
-   <header class="min-h-screen bg-black bg-opacity-75 bg-blend-overlay showcase border-gray-600 flex justify-center items-center bg-no-repeat">
-       <div class="z-10 h-full py-32 md:py-0 text-gray-100 text-center flex items-center flex-col" style="width: 100vw; height:140vh; margin-top:20px;">
-           <form method="post" class="container w-80 h-96 bg-black" style="width:35vw; height:85vh; border-radius:5%;">
-               {% csrf_token %}
-                   <div style="justify-content:center; display:flex; height: 100px; position:relative;top:-50px">
-                        <img src="{% static 'images/COTUCA_logo.png' %}" >
-                   </div>
+<header class="min-h-screen bg-black bg-opacity-75 bg-blend-overlay showcase border-gray-600  flex justify-center items-center bg-no-repeat">
+    <div class="z-10 h-full py-32 md:py-0 text-gray-100 text-center flex items-center flex-col" >
+     <!-- <form method="post" style="width: 90%; max-width: 35rem; padding: 2rem; border-radius:5vh; background-color: black;"> -->
+            {% csrf_token %}
+            <div style="justify-content:center; display:flex; height: 10vh;width: 5vw; position:absolute;margin-top: -15vh;">
+                <img src="{% static 'images/COTUCA_logo.png' %}">
+            </div>
 
-                   <fieldset class="form-group" style="margin-top:-4vh">
-                       <legend class="border-bottom mb-4"></legend>
-                        {{ form|crispy }}
-                       <img style="height: 20px; margin-left:110px; position:relative;top:-9vh" src="{% static 'images/icone-ra1.png' %}">
-                       <img style="height: 15px; margin-left:111px; position:relative;top:-23px" src="{% static 'images/icone-email.png' %}">
-                       <img style="height: 17px; margin-left:111px; position:relative;top:-24px" src="{% static 'images/icone-nome.png' %}">
-                       <button class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md" type="submit" style="margin-top:3.8vh">Cadastrar</button>
-                   </fieldset>
-               <!--
-                           <label>Digite seu RA:</label><br/>
-                           <input type="text" name="ra" placeholder="21119"  style="border-radius: 5px; color: black ; height:30px; width:260px; padding:15px; padding-left:23px;"/><br/>
+            <div class="conteudo">
+                <fieldset class="form-group" style="margin-top: -2rem;margin-top: 40px;">
+                    
+                    {{ form|crispy }}   
+                </fieldset>
 
-                           <label>Digite seu Email:</label><br>
-                           <input type="text" name="email" placeholder="vitor.pafaro@gmail.com" style="border-radius: 5px; color:black;height:30px; width:260px; padding:15px; padding-left:28px;"/><br/>
+                <button class="bg-red-500 hover-bg-blue-700 text-white font-bold py-2 px-4 rounded-md" type="submit" style="margin-top: 0.5rem;">ENTRAR</button>
+                <br>
+                <br>
+                <a href="{% url 'bin:cadastro' %}" style="color:white; font-family:sans-serif; font-size: 1em; margin-top: -1rem;">Cadastre-se</a>
+            </div>
+       <!--</form> --> 
+    </div>
+</header>
 
-                           <label>Digite seu Nome:</label><br>
-                            <input type="text" name="nome" placeholder="Victor" style="border-radius: 5px; color:black; height:30px; width:260px; padding:15px; padding-left:35px;"/>
-                       </div>
-                   </container>
-                   -->
-           </form>
-       </div>
-   </header>
+<footer class="footer">
+    <ul class="flex flex-col md:flex-row justify-between items-center text-gray-100">
+        <li>&copy; 2023</li>
+        <li>TCC Chatbot - Feito com Python (Django)</li>
+        <li>JNV</li>
+    </ul>
+</footer>
 
-   <footer class=" px-5 py-10 bg-stone-400">
-         <ul class="flex justify-between items-center">
-             <li><b>&copy; 2023</b></li>
-             <li><b> TCC Chatbot - Feito com Python (Django)</b></li>
-             <li><b>JNV</b></li>
-         </ul>
-   </footer>
+<style>
+    .footer {
+        background-color: silver;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .footer ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer li {
+        margin: 0.5rem;
+    }
+
+    /* Estilos específicos para telas menores */
+    @media (max-width: 768px) {
+        .footer {
+            flex-direction: column;
+        }
+    }
+</style>
+
 {% endblock %}

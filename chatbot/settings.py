@@ -84,7 +84,7 @@ DATABASES = {
     }
 }
 
-import dj_database_url
+#import dj_database_url
 import os
 
 DATABASE_URL = os.getenv("DATABASE_URL")
