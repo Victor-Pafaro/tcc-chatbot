@@ -26,8 +26,8 @@ Homepage
 
                 <div class = " containerBin " style = " width: 20vw; height:75vh; background-color: white;border-radius: 15px 0px 0px 15px; margin-left: -10vw">
                     <img src="{% static 'images/logo_ctc.png' %}" style = " width: 4.5vw; height: 9.4vh; margin-top: 0.5vw; margin-left: 8vw;position:absolute;"/>
-                    <a href="#" style="font-size: 1vw;text-decoration: none;color: black; cursor: pointer; margin-left:7vw; position: absolute; margin-top: 6vw;text-align: center;"><img src="{% static 'images/dud.png' %}" style="text-align:center;margin-left: -2.5vw;width:2vw;margin-top: -0.090vw; height:4vh;position:absolute;justify-content:center;"/>Dúvidas Frequentes</a>
-                    <a href="#"style="position:absolute; font-style:none;margin-top: 34vw;"><img src="{% static 'images/sair.png' %}" style="position:absolute;width:2vw; height:4vh;margin-left:3vw; margin-left: 1.5vw; margin-top:-6vh;"><p style="margin-top:-5vh;margin-left: 4vw; font-weight:bold;font-family:Sans-Serif;">Sair</p></a>
+                    <a href="{% url 'bin:duvidasfrequentes' %}" style="font-size: 1vw;text-decoration: none;color: black; cursor: pointer; margin-left:7vw; position: absolute; margin-top: 6vw;text-align: center;"><img src="{% static 'images/dud.png' %}" style="text-align:center;margin-left: -2.5vw;width:2vw;margin-top: -0.090vw; height:4vh;position:absolute;justify-content:center;"/>Dúvidas Frequentes</a>
+                    <a href="{% url 'bin:logout' %}" style="position:absolute; font-style:none;margin-top: 34vw;"><img src="{% static 'images/sair.png' %}" style="position:absolute;width:2vw; height:4vh;margin-left:3vw; margin-left: 1.5vw; margin-top:-6vh;"><p style="margin-top:-5vh;margin-left: 4vw; font-weight:bold;font-family:Sans-Serif;">Sair</p></a>
                 </div>
 
                     <div style=" margin-top: -75vh;border-radius: 0px 15px 15px 0px; width: 50vw;height: 75vh; background-color: black; margin-left:10vw;">

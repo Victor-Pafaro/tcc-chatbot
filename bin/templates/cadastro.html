@@ -82,24 +82,26 @@ Login
 {% block content %}
 <header class="min-h-screen bg-black bg-opacity-75 bg-blend-overlay showcase border-gray-600  flex justify-center items-center bg-no-repeat">
     <div class="z-10 h-full py-32 md:py-0 text-gray-100 text-center flex items-center flex-col" >
-     <!-- <form method="post" style="width: 90%; max-width: 35rem; padding: 2rem; border-radius:5vh; background-color: black;"> -->
-            {% csrf_token %}
+     <!--  style="width: 90%; max-width: 35rem; padding: 2rem; border-radius:5vh; background-color: black;"> -->
+
             <div style="justify-content:center; display:flex; height: 10vh;width: 5vw; position:absolute;margin-top: -15vh;">
                 <img src="{% static 'images/COTUCA_logo.png' %}">
             </div>
-
+        <form method="post">
+            {% csrf_token %}
             <div class="conteudo">
                 <fieldset class="form-group" style="margin-top: -2rem;margin-top: 40px;">
                     
-                    {{ form|crispy }}   
+                    {{ form|crispy }}
+                    <button class="bg-red-500 hover-bg-blue-700 text-white font-bold py-2 px-4 rounded-md" type="submit" style="margin-top: 0.5rem;">CADASTRAR</button>
                 </fieldset>
-
-                <button class="bg-red-500 hover-bg-blue-700 text-white font-bold py-2 px-4 rounded-md" type="submit" style="margin-top: 0.5rem;">ENTRAR</button>
+            </div>
+        </form>
+                <!--
                 <br>
                 <br>
                 <a href="{% url 'bin:cadastro' %}" style="color:white; font-family:sans-serif; font-size: 1em; margin-top: -1rem;">Cadastre-se</a>
-            </div>
-       <!--</form> --> 
+                -->
     </div>
 </header>
 

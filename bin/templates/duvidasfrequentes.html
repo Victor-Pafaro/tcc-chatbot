@@ -12,14 +12,19 @@ Fazer Login
 
        <header class="min-h-screen bg-blend-overlay showcase border-gray-600  flex justify-center items-center bg-no-repeat bg-red-600">
            <div class="z-10 h-full py-32 md:py-0 text-gray-100 text-center flex items-center flex-col" style="width: 100vw; height:100vh; margin-top:20px;">
-               <div method="post" class="container w-80 h-96 bg-black" style="width:800px; height:750px; border-radius:5%; margin-bottom:20px">
-                <h2 style="margin-top:10px;color:red; font-weight:bold; font-size:30px; font-family: Marker Felt">Duvidas Frequentes</h2>
-                 {% for pergunta in object.perguntas.all %}
-                   <p>{{pergunta.descricao_pergunta}}</p>
-                 {% endfor %}
+               <div class="container w-80 h-96 bg-black" style="width:800px; height:750px; border-radius:5%; margin-bottom:20px">
+                   <div>
+                    <h2 style="margin-top:10px;color:red; font-weight:bold; font-size:30px; font-family: Marker Felt">Duvidas Frequentes</h2>
+                   </div>
+
+                   <div style="margin-top:3vh;">
+                     {% for pergunta in object_list %}
+                       <p> {{ forloop.counter }}. {{pergunta.descricao_pergunta}}</p>
+
+                     {% endfor %}
+                   </div>
 
                </div>
-
            </div>
        </header>
 
