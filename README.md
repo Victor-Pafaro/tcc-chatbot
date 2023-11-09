@@ -36,7 +36,6 @@ Obtenha sua chave de API do OpenAI.
 
 Adicione a chave ao arquivo .env na raiz do projeto:
 
-makefile
 
 OPENAI_API_KEY=SuaChaveAqui
 
