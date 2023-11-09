@@ -13,25 +13,25 @@ Configuração do Django
 
 python -m venv venv
 
-Ative o ambiente virtual:
+2 - Ative o ambiente virtual:
 No Windows:
 venv\Scripts\activate
 
 No Linux/Mac:
 source venv/bin/activate
 
-Instale as dependências do Django:
+3 - Instale as dependências do Django:
 pip install django
 
-Execute as migrações do banco de dados:
+4 - Execute as migrações do banco de dados:
 python manage.py migrate
 
-Inicie o servidor:
+5 - Inicie o servidor:
 python manage.py runserver
 
 O seu servidor estará disponível em http://localhost:8000
 
-Configuração da API do OpenAI
+6 - Configuração da API do OpenAI
 Obtenha sua chave de API do OpenAI.
 
 Adicione a chave ao arquivo .env na raiz do projeto:
@@ -39,7 +39,7 @@ Adicione a chave ao arquivo .env na raiz do projeto:
 
 OPENAI_API_KEY=SuaChaveAqui
 
-Treinamento do Chatbot
+7 - Treinamento do Chatbot
 Utilize a biblioteca Llama-Index para treinar o chatbot com dados específicos do colégio.
 
 # Exemplo de código para treinamento
@@ -49,5 +49,5 @@ llama = LlamaIndex()
 llama.train("dados_do_colegio.txt")
 Substitua "dados_do_colegio.txt" pelo caminho do arquivo de treinamento contendo perguntas e respostas específicas do colégio.
 
-Utilização do Chatbot
+8 - Utilização do Chatbot
 Acesse o site em http://localhost:8000/ e comece a interagir com o Chatbot para obter informações sobre o colégio.
