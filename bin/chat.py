@@ -12,7 +12,7 @@ class Chat:
         return response
 
     def treino(self):
-        os.environ["OPENAI_API_KEY"] = "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"
+        os.environ["OPENAI_API_KEY"] = "token-aqui"
 
         path = os.path.join(os.path.abspath("."),"bin", "artigos")
         print(path)
