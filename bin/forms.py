@@ -3,6 +3,7 @@ from .models import Usuario
 from django import forms
 
 
+
 class FormHomebin(forms.Form):
      pergunta = forms.CharField(label=False,widget = forms.TextInput(attrs={'placeholder':'Digite sua dúvida...'}))
 
@@ -14,7 +15,7 @@ class CriarContaForm(UserCreationForm):
     )
     password1 = forms.CharField(
         label="Senha",
-        widget = forms.TextInput(attrs={'placeholder':''})
+        widget = forms.PasswordInput(attrs={'placeholder':''})
     )
 
     class Meta:
